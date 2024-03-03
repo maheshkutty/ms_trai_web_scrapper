@@ -1,0 +1,200 @@
+{
+  "id": "6af34be7-66d3-4242-888b-257c28e3c64e",
+  "version": "2.0",
+  "name": "trai_web_scarpping",
+  "url": "https://www.trai.gov.in/whats-new",
+  "tests": [{
+    "id": "ce08b92a-a8b9-4331-9c48-1c440d7d7e98",
+    "name": "Download PDF v2",
+    "commands": [{
+      "id": "73ac64e1-52d3-4f8b-aaf0-ece19768e903",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.trai.gov.in/whats-new",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "388bd049-9363-4cb1-840e-d04f7147de44",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5c29b44-7859-4bfe-9791-8a765553c0b9",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//section[@id='fontSize']/div/div/div[2]/div[2]/table/thead/tr/th[2]",
+      "targets": [
+        ["css=thead .views-field-title", "css:finder"],
+        ["xpath=//section[@id='fontSize']/div/div/div[2]/div[2]/table/thead/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Title')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "1857ba6c-8980-47b8-a744-7316249695ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "29c81c2f-916d-4671-91f1-7bd4367d0ec8",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "//div[contains(@class, 'scroll-table1')]/table/tbody/tr",
+      "targets": [],
+      "value": "totalTableElement"
+    }, {
+      "id": "d3573a3a-eed4-4f85-be29-4063d233b589",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eeb1c98b-25ff-48b0-88c9-8c0aa5299ce2",
+      "comment": "",
+      "command": "click",
+      "target": "//div[contains(@class, 'scroll-table1')]/table/tbody/tr[${count}]/td[2]/a",
+      "targets": [
+        ["linkText=TRAI delegation led by Chairman, TRAI participated in the GSMA Mobile World Congress 2024 at Barcelona, Spain held from 26th to 28th Feb 2024.", "linkText"],
+        ["css=.views-row-first a", "css:finder"],
+        ["xpath=//a[contains(text(),'TRAI delegation led by Chairman, TRAI participated in the GSMA Mobile World Congress 2024 at Barcelona, Spain held from 26th to 28th Feb 2024.')]", "xpath:link"],
+        ["xpath=//section[@id='fontSize']/div/div/div[2]/div[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/notifications/press-release/trai-delegation-led-chairman-trai-participated-gsma-mobile-world')]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'TRAI delegation led by Chairman, TRAI participated in the GSMA Mobile World Congress 2024 at Barcelona, Spain held from 26th to 28th Feb 2024.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96f9b35c-2d62-4526-a736-54671b5a93d4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Download')]",
+      "targets": [
+        ["linkText=Download (744.47 KB)", "linkText"],
+        ["css=.field-content > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Download (744.47 KB)')]", "xpath:link"],
+        ["xpath=//div[@id='block-views-press-release-block-2']/div/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.trai.gov.in/sites/default/files/PR_No.10of2024.pdf')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Download (744.47 KB) ')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6125",
+      "windowTimeout": 2000
+    }, {
+      "id": "dd6053b5-f019-4e75-9256-127d5e9d54d7",
+      "comment": "",
+      "command": "webdriverChooseOkOnVisibleConfirmation",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "490f844d-4684-4818-89dd-a39a7b356305",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba33dfda-93cf-462e-8723-a02f301bde31",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49c83ed1-2e4b-487b-9b79-86c39c1a6ac7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60edbd86-00dd-4657-ab41-547f0795c991",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[contains(text(),'last »')]",
+      "targets": [],
+      "value": "checkLast"
+    }, {
+      "id": "9fd84f82-201a-43a7-9da4-f1463ade4ec7",
+      "comment": "",
+      "command": "if",
+      "target": "${checkLast} > 0 && (${count} > ${totalTableElement})",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "da92fbf0-89f2-44e5-96d9-d3422a7d4b84",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "409a9a18-bad8-41af-af0f-f8b809adec3a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'next ›')]",
+      "targets": [
+        ["linkText=next ›", "linkText"],
+        ["css=.pager-next > a", "css:finder"],
+        ["xpath=//a[contains(text(),'next ›')]", "xpath:link"],
+        ["xpath=//section[@id='fontSize']/div/div/div[3]/ul/li[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/whats-new?title=&page=1')])[2]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'next ›')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea758511-02f0-4f97-9809-b791036db72f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "//div[contains(@class, 'scroll-table1')]/table/tbody/tr[last()]/td[2]/a",
+      "targets": [],
+      "value": "300000"
+    }, {
+      "id": "21d365b7-4a33-4c44-993b-eb2a22b9bf09",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "//div[contains(@class, 'scroll-table1')]/table/tbody/tr",
+      "targets": [],
+      "value": "totalTableElement"
+    }, {
+      "id": "aefa3c27-1e33-406d-a4bc-074c0c206e50",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fc3bb58-0e2b-49a3-9d5e-4713e469c491",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${count}) + 1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "1280c152-c2a6-485b-b2af-9cccd1ba5408",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${checkLast} > 0 || (${count} < ${totalTableElement})",
+      "targets": [],
+      "value": "checkLast"
+    }]
+  }],
+  "suites": [{
+    "id": "2f6193f0-0082-4688-8938-4ef1979ec8cf",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.trai.gov.in/whats-new", "https://www.trai.gov.in/whats-new?title=&page=33"],
+  "plugins": []
+}
